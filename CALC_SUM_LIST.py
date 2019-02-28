@@ -6,6 +6,9 @@ from functools import reduce
 
 
 def single_number_calculating():
+    """
+    Prints the sum of a list given by user
+    """
     print("Enter one number at a time\nInsert 'stop' to stop")
     numbers = []
     number = input()
@@ -17,7 +20,15 @@ def single_number_calculating():
 
 
 def multi_number_calculating():
-    pass
+    """
+    Prints the sum of a list given by user
+    """
+    print("Enter the list (Like: '1,2,3,4'")
+    numbers = input()
+    numbers = numbers.split(',')
+    numbers = map(int, numbers)
+    sum_list = sum(numbers)
+    print(sum_list)
 
 
 def menu():
