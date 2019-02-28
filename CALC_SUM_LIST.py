@@ -2,10 +2,18 @@
 """
 The program calculates the sum of a list given by the user
 """
+from functools import reduce
 
 
 def single_number_calculating():
-    pass
+    print("Enter one number at a time\nInsert 'stop' to stop")
+    numbers = []
+    number = input()
+    while number != 'stop':
+        numbers.append(int(number))
+        number = input()
+    sum_list = sum(numbers)
+    print(sum_list)
 
 
 def multi_number_calculating():
@@ -23,10 +31,10 @@ def menu():
     print("1 - Calculate one number at a time")
     print("2 - Calculate the whole list at once")
     option = input()
-    if option == 1:
-        return single_number_calculating()
-    if option == 2:
-        return  multi_number_calculating()
+    if option == "1":
+        single_number_calculating()
+    if option == "2":
+        multi_number_calculating()
 
 
 def main():
