@@ -37,8 +37,18 @@ def compress_str(to_compress):
     return compressed_str
 
 
+def test():
+    """
+    Tests the compression on str type given as input
+    """
+    print("Enter a string")
+    kelet = input()
+    print("Compressed string:")
+    print(compress_str(kelet))
+
+
 def main():
-    pass
+    test()
 
 
 if __name__ == '__main__':
