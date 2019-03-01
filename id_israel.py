@@ -36,8 +36,20 @@ def is_valid_id(id_str):
     return ((digits_sum % 10 + check_digit) % 10) == 0
 
 
+def test_id():
+    """
+    tests if the id given as input(promt) is valid
+    """
+    print("Enter id.")
+    usr_id = input()
+    if is_valid_id(usr_id) is True:
+        print("Id is valid")
+    else:
+        print("Id is'nt valid")
+
+
 def main():
-    pass
+    test_id()
 
 
 if __name__ == '__main__':
