@@ -44,8 +44,34 @@ def check(game):
     return 0  # Draw
 
 
+def test():
+    """
+    Displays a test on check function
+    """
+    game = [[1, 2, 0],
+            [2, 1, 0],
+            [2, 1, 1]]
+    line = "{line[0]}|{line[1]}|{line[2]}"
+
+    print("Board:")
+    print(line.format(line=game[0]))
+    print("-"*5)
+    print(line.format(line=game[1]))
+    print("-"*5)
+    print(line.format(line=game[2]))
+
+    result = check(game)
+
+    if result == 1:
+        print("Player 1 has won.")
+    elif result == 2:
+        print("Player 2 has won.")
+    else:
+        print("Draw.")
+
+
 def main():
-    pass
+    test()
 
 
 if __name__ == '__main__':
