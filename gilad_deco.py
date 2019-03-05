@@ -20,7 +20,7 @@ def cache_decorator(func):
 
     def wrap(*args):
         if args not in memo:
-            memo[args] = func(args)
+            memo[args] = func(*args)
         return memo[args]
     return wrap
 
