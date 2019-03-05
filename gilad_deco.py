@@ -25,6 +25,22 @@ def cache_decorator(func):
     return wrap
 
 
+def fibo(n):
+    """
+    Fibonacci series
+
+    Params:
+        n - Index of the n element in fibonacci series
+
+    Return:
+        The value of the the n element in fibonacci series
+    """
+    if n == 0 or n == 1:
+        return n
+
+    return fibo(n - 1) + fibo(n - 2)
+
+
 def main():
     pass
 
