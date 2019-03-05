@@ -26,8 +26,21 @@ def gilad_map(func, items):
     return lst
 
 
+def test_map():
+    """
+    Function tests gilad_map function
+    """
+    items = list(range(11))
+    print("Items:")
+    print(items)
+    print("\nFunction to apply: lambda x: x * x\nReturns (x squared)")
+    items = gilad_map(lambda x: x * x, items)
+    print("\nNew items:")
+    print(items)
+
+
 def main():
-    pass
+    test_map()
 
 
 if __name__ == '__main__':
