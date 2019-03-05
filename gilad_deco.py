@@ -25,6 +25,7 @@ def cache_decorator(func):
     return wrap
 
 
+@ cache_decorator
 def fibo(n):
     """
     Fibonacci series
@@ -41,8 +42,20 @@ def fibo(n):
     return fibo(n - 1) + fibo(n - 2)
 
 
+def test_decorator():
+    """
+    Tests cache_decorator on fibo function
+    """
+    print("Fibonacci 200 element")
+    print(fibo(200))
+    print("\nFibonacci 500 element after caching 100 element")
+    print(fibo(500))
+    print("\nFibonacci 700 element after caching 500 element")
+    print(fibo(700))
+
+
 def main():
-    pass
+    test_decorator()
 
 
 if __name__ == '__main__':
